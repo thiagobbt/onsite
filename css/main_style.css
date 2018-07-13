@@ -1,0 +1,45 @@
+#showcase {
+	margin: 10px;
+	display: flex;
+	border-radius: 8px;
+	border: 2px solid #DFE2E3;
+	min-height: 250px;
+	font-family: sans-serif;
+}
+
+#showcase div {
+	display: flex;
+	flex-direction: column;
+}
+
+#showcase .reference {
+	min-width: 230px;
+}
+
+#showcase .content {
+	flex: 1;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(242,248,254,0.8) 98%, rgba(234,244,253,1) 100%);
+}
+
+#showcase .reference .content {
+	border-right: 1px solid #EFEFEF;
+}
+
+#showcase .recommendation {
+	flex: 1;
+}
+
+#showcase .header {
+	margin: 0px;
+	padding: 8px;
+	background: rgb(239,247,254);
+	background: linear-gradient(180deg, rgba(239,247,254,1) 0%, rgba(239,247,254,1) 48%, rgba(229,241,251,1) 52%, rgba(229,241,251,1) 100%); 
+}
+
+#showcase .header p {
+	font-size: 18px;
+	font-weight: 600;
+	color: #006699;
+	margin: 0px;
+}
