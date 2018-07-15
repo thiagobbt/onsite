@@ -4,6 +4,7 @@
 	border-radius: 8px;
 	border: 2px solid #DFE2E3;
 	min-height: 250px;
+	min-width: 450px;
 	font-family: sans-serif;
 	background: rgb(255,255,255);
 	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 90%, rgba(242,248,254,0.8) 98%, rgba(234,244,253,1) 100%);

@@ -1,3 +1,36 @@
+var resize_timeout = false;
+var resize_delay = 250;
+
+function showcase_resize() {
+	document.querySelector("#onsite-right-btn").classList.remove("onsite-disabled");
+
+	var showcase_items = document.querySelector("#onsite-items");
+	var items = document.querySelectorAll("#onsite-items .onsite-item");
+	var item_width = items[0].offsetWidth;
+
+	var current_margin = parseFloat(showcase_items.style.marginLeft.replace("px", ""));
+	if (isNaN(current_margin)) current_margin = 0;
+
+	var new_margin = current_margin;
+	var items_shown = (showcase_items.offsetWidth + current_margin) / item_width;
+
+	var margin_limit = (items.length - items_shown) * item_width * -1;
+
+	if (new_margin <= margin_limit) {
+		new_margin = margin_limit;
+		document.querySelector("#onsite-right-btn").classList.add("onsite-disabled");
+	}
+
+	showcase_items.style["margin-left"] = new_margin + "px";
+}
+
+window.addEventListener("resize", function() {
+	console.log("resize");
+	clearTimeout(resize_timeout);
+
+	timeout = setTimeout(showcase_resize, resize_delay);
+});
+
 function fill_showcase(data) {
 	var reference_content = document.querySelector("#onsite-reference .onsite-content");
 	var reference_item = create_item(data.data.reference.item);
