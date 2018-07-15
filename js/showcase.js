@@ -1,3 +1,6 @@
+(function() {
+"use strict";
+
 var resize_timeout = false;
 var resize_delay = 250;
 
@@ -27,7 +30,7 @@ function showcase_resize() {
 window.addEventListener("resize", function() {
 	clearTimeout(resize_timeout);
 
-	timeout = setTimeout(showcase_resize, resize_delay);
+	resize_timeout = setTimeout(showcase_resize, resize_delay);
 });
 
 function fill_showcase(data) {
@@ -162,5 +165,11 @@ function prevPage() {
 	return false;
 }
 
+window.showcase_callback = fill_showcase;
+
+})();
+
 // Workaround for the callback not being set properly
-var X = fill_showcase;
+var X = window.showcase_callback;
+
+var fill_showcase = window.showcase_callback;
