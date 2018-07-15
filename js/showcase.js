@@ -25,7 +25,6 @@ function showcase_resize() {
 }
 
 window.addEventListener("resize", function() {
-	console.log("resize");
 	clearTimeout(resize_timeout);
 
 	timeout = setTimeout(showcase_resize, resize_delay);
