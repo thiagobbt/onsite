@@ -8,18 +8,26 @@
     <script type="text/javascript" src="challenge.json" defer></script>
   </head>
   <body>
-    <div id="showcase">
-      <div class="reference">
-        <div class="header">
+    <div id="onsite-showcase">
+      <div id="onsite-reference">
+        <div class="onsite-header">
           <p>Você visitou:</p>
         </div>
-        <div class="content"></div>
+        <div class="onsite-content"></div>
       </div>
-      <div class="recommendation">
-        <div class="header">
+      <div id="onsite-recommendation">
+        <div class="onsite-header">
           <p>e talvez se interesse por:</p>
         </div>
-        <div class="content"></div>
+        <div class="onsite-content">
+          <div class="onsite-btn-box">
+            <div id="onsite-left-btn" class="onsite-btn onsite-disabled"></div>
+          </div>
+          <div id="onsite-items"></div>
+          <div class="onsite-btn-box">
+            <div id="onsite-right-btn" class="onsite-btn"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
