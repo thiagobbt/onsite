@@ -23,7 +23,6 @@
 .onsite-content {
 	flex-direction: row !important;
 	height: 100%;
-	align-items: baseline;
 	margin-top: 10px;
 }
 
@@ -32,6 +31,7 @@
 	overflow: hidden;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-right: -40px;
 	transition: margin-left 300ms;
 }
 
@@ -46,6 +46,7 @@
 	padding-right: 10px;
 	flex: 1;
 	transition: visibility 1000ms;
+	height: 90%;
 }
 
 .onsite-item img {
@@ -137,16 +138,33 @@
 	overflow: hidden;
 	width: 20px;
 	min-width: 20px;
-	height: 40px;
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.onsite-btn-container {
+	z-index: 1;
+	height: 90%;
+}
+
+.onsite-btn-container.onsite-left {
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+}
+
+.onsite-btn-container.onsite-right {
+	background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
 }
 
 .onsite-btn {
 	position: relative;
 	display: block;
 	width: 200%;
-	height: 100%;
+	height: 40px;
 	background: blue;
 	transform: rotate(45deg);
+	top: 40%;
 }
 
 .onsite-btn.onsite-disabled {
