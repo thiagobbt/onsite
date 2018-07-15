@@ -161,3 +161,6 @@ function prevPage() {
 
 	return false;
 }
+
+// Workaround for the callback not being set properly
+var X = fill_showcase;
